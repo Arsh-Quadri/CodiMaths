@@ -9,8 +9,19 @@ export default {
   theme: {
     extend: {
       colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+        primary: {
+          dark: "#212121",
+          exdark: "#0F0F0F",
+          golden: "#FFBE1A",
+          fontcol: "#CFCFCF",
+          btnfont: "#131616",
+        },
+      },
+      boxShadow: {
+        xs: "0px 1px 2px 0px rgba(16, 24, 40, 0.05)",
+      },
+      fontFamily: {
+        lilita: ["var(--font-lilita-one)", "serif"],
       },
     },
   },
