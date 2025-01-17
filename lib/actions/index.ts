@@ -14,9 +14,11 @@ export async function getAllNotes() {
       throw new Error("Expected an array, but got something else");
     }
 
-    return notes.map((note) => ({
-      ...note,
+    return notes.map((note: any) => ({
       _id: note._id.toString(), // Convert ObjectId to string
+      title: note.title || "Untitled", // Ensure title is present
+      desc: note.desc || "", // Handle optional desc
+      date: note.date || new Date().toISOString(), // Ensure date is present
       createdAt: note.createdAt.toISOString(), // Convert Date to string
       updatedAt: note.updatedAt.toISOString(), // Convert Date to string
     }));
