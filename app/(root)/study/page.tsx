@@ -25,8 +25,6 @@ const Study = async () => {
       <div className="max-w-2xl mx-auto">
         Study {session?.user?.name}
         <NotesClient initialNotes={initialNotes} />
-        <p className="text-3xl font-bold font-lilita">Heading</p>
-        <span className="font-medium">Hello every one how are you ?</span>
       </div>
     </div>
   );

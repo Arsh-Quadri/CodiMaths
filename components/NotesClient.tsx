@@ -61,13 +61,13 @@ const NotesClient: React.FC<NotesClientProps> = ({ initialNotes }) => {
           placeholder="Title"
           value={title}
           onChange={(e) => setTitle(e.target.value)}
-          className="block w-full mb-2 p-2 border rounded"
+          className="block w-full mb-2 p-2 border rounded bg-transparent"
         />
         <textarea
           placeholder="Description"
           value={desc}
           onChange={(e) => setDesc(e.target.value)}
-          className="block w-full mb-2 p-2 border rounded"
+          className="block w-full mb-2 p-2 border rounded bg-transparent"
         />
         <button
           type="submit"

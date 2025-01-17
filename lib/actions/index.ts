@@ -2,6 +2,7 @@
 import Note from "../models/note.model";
 import User from "../models/user.model";
 import { connectToDB } from "../mongodb";
+import { signOut } from "@/auth";
 
 export async function getAllNotes() {
   try {
@@ -77,4 +78,9 @@ export async function findUserAccess(email) {
     console.error("Error finding user access:", error);
     return false; // Handle errors gracefully
   }
+}
+
+export async function handleLogout() {
+  console.log("signout");
+  await signOut();
 }
