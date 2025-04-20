@@ -2,6 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+*{
+  margin: 0%;
+  padding: 0%;
+}
+
 body {
   background-color: #212121;
   color: #cfcfcf;
@@ -57,7 +62,7 @@ body {
   }
 
   .head-text {
-    @apply text-6xl leading-[72px] font-medium tracking-[-1.2px] text-primary-fontcol;
+    @apply text-5xl sm:text-6xl md:text-8xl leading-[60px] md:leading-[110px] font-medium tracking-[-1.2px] text-white py-5;
   }
 
   .section-text {

@@ -1,64 +1,78 @@
-import { auth, signIn } from "@/auth";
-import SimpleAccordion from "@/components/Accordion";
-import RotatingHeadlines from "@/components/RotatingHeadlines";
-import { findUserAccess } from "@/lib/actions";
-import { redirect } from "next/navigation";
-import TrendingFlatIcon from "@mui/icons-material/TrendingFlat";
+// import HeroSection1 from "../../components/HeroSection1";
+// import HeroSection2 from "../../components/HeroSection2";
+// import HeroSection3 from "../../components/HeroSection3";
+// export default function Home() {
+//   return (
+//     <div className="w-full h-full flex flex-col justify-center items-center">
+//       <div className="h-fit w-full">
+//         <HeroSection1 />
+//       </div>
+//       <div className="h-fit w-full">
+//         <HeroSection2 />
+//       </div>
+//       <div className="h-fit w-full">
+//         <HeroSection3 />
+//       </div>
+//     </div>
+//   );
+// }
+import HeroSection1 from "../../components/HeroSection1";
+import HeroSection2 from "../../components/HeroSection2";
+import HeroSection3 from "../../components/HeroSection3";
+import HeroSection4 from "../../components/HeroSection4";
+import HeroSection5 from "../../components/HeroSection5";
+import HeroSection6 from "../../components/HeroSection6";
+import HeroSection7 from "../../components/HeroSection7";
+import HeroSection8 from "../../components/HeroSection8";
+import Footer from "../../components/Footer";
 
-export default async function Home() {
-  const session = await auth();
-
-  // Check if the user is logged in and hasAccess then redirect to /study
-  if (session?.user?.email) {
-    const hasAccess = await findUserAccess(session.user.email);
-    if (hasAccess) {
-      redirect("/study");
-    }
-  }
+export default function Home() {
   return (
-    <div className="w-full h-full p-3">
-      <div className="flex justify-center items-center text-center flex-col w-full max-w-[1100px] mx-auto">
-        <RotatingHeadlines />
-        <h1 className="head-text mt-5 font-lilita">Study Less, Learn More</h1>
-        <h2 className="head-text mt-5 font-medium font-lilita">
-          Instant Summaries, Flashcards, and Reports <br /> All in One Place.
-        </h2>
-        <span className="font-medium mt-5 text-2xl">
-          Upload study materials and get instant summaries, interactive
-          flashcards, citation-ready reports, and AI-powered chat with documents
-          for quick doubt solving—perfect for last-minute prep!
-        </span>
-        <form
-          action={async () => {
-            "use server";
-            await signIn("google");
-          }}
-        >
-          <button
-            type="submit"
-            className="mt-10 px-5 py-2 border border-primary-golden rounded-md text-primary-golden font-medium text-2xl bg-primary-golden bg-opacity-10 hover:bg-opacity-0 mb-10 flex items-center justify-center gap-2"
-          >
-            <TrendingFlatIcon
-              className=" text-primary-golden pt-1 arrow-animate"
-              sx={{ fontSize: "40px" }}
-            />
-            <span>Start Learning Smarter</span>
-          </button>
-        </form>
-        <div className="w-full flex items-start">
-          <div className="left left-0 w-[50%] text-start">
-            <h3 className="font-lilita text-[40px] font-medium">
-              Frequently Asked Questions
-            </h3>
-            <p className="font-medium">
-              Have another question? Contact me on Twitter or by email.
-            </p>
-          </div>
-          <div className="right right-0 w-[50%]">
-            <SimpleAccordion />
-          </div>
-        </div>
+    <div className="w-full h-full flex flex-col justify-center items-center">
+      <div className="h-fit w-full relative">
+        <HeroSection1 />
+        {/* Fade to black for transition */}
+        <div className="w-full h-10 bg-gradient-to-b from-transparent to-[#09161D] absolute bottom-0 left-0 z-20" />
       </div>
+
+      <div className="h-fit w-full relative">
+        {/* Fade from black for smooth start */}
+        <div className="w-full h-20 bg-gradient-to-t from-transparent to-[#09161D] absolute top-0 left-0 z-20" />
+        <HeroSection2 />
+        <div className="w-full h-20 bg-gradient-to-b from-transparent to-[#09161D] absolute bottom-0 left-0 z-20" />
+      </div>
+
+      <div className="h-fit w-full relative">
+        <div className="w-full h-20 bg-gradient-to-t from-transparent to-[#09161D] absolute top-0 left-0 z-20" />
+        <HeroSection3 />
+        <div className="w-full h-20 bg-gradient-to-b from-transparent to-[#09161D] absolute bottom-0 left-0 z-20" />
+      </div>
+      <div className="h-fit w-full relative">
+        <div className="w-full h-20 bg-gradient-to-t from-transparent to-[#09161D] absolute top-0 left-0 z-20" />
+        <HeroSection4 />
+        <div className="w-full h-20 bg-gradient-to-b from-transparent to-[#09161D] absolute bottom-0 left-0 z-20" />
+      </div>
+      <div className="h-fit w-full relative">
+        <div className="w-full h-20 bg-gradient-to-t from-transparent to-[#09161D] absolute top-0 left-0 z-20" />
+        <HeroSection5 />
+        <div className="w-full h-20 bg-gradient-to-b from-transparent to-[#09161D] absolute bottom-0 left-0 z-20" />
+      </div>
+      <div className="h-fit w-full relative">
+        <div className="w-full h-20 bg-gradient-to-t from-transparent to-[#09161D] absolute top-0 left-0 z-20" />
+        <HeroSection6 />
+        <div className="w-full h-20 bg-gradient-to-b from-transparent to-[#09161D] absolute bottom-0 left-0 z-20" />
+      </div>
+      <div className="h-fit w-full relative">
+        <div className="w-full h-20 bg-gradient-to-t from-transparent to-[#09161D] absolute top-0 left-0 z-20" />
+        <HeroSection7 />
+        <div className="w-full h-20 bg-gradient-to-b from-transparent to-primary-dark absolute bottom-0 left-0 z-20" />
+      </div>
+      <div className="h-fit w-full relative">
+        <div className="w-full h-20 bg-gradient-to-t from-transparent to-primary-dark absolute top-0 left-0 z-20" />
+        <HeroSection8 />
+        <div className="w-full h-20 bg-gradient-to-b from-transparent to-primary-dark absolute bottom-0 left-0 z-20" />
+      </div>
+      <Footer />
     </div>
   );
 }
