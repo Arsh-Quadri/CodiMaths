@@ -35,6 +35,7 @@ const HeroSection8 = () => {
         <div className="flex justify-center items-center gap-5 w-full flex-wrap my-8">
           {cardData.map((card, index) => (
             <Image
+              key={index}
               src={card.img}
               alt={`card${index + 1}`}
               className="bg-white mb-3 object-contain w-[200px] rounded-lg h-[150px]"

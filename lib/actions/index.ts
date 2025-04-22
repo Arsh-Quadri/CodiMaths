@@ -86,3 +86,22 @@ export async function handleLogout() {
   console.log("signout");
   await signOut();
 }
+
+import { GoogleGenerativeAI } from "@google/generative-ai";
+
+const API_KEY = process.env.NEXT_PUBLIC_GENAI_KEY;
+const MODEL_NAME = "gemini-2.0-flash-exp";
+
+const genAI = new GoogleGenerativeAI(API_KEY);
+
+export const getGeminiResponse = async (prompt) => {
+  try {
+    const model = genAI.getGenerativeModel({ model: MODEL_NAME });
+    const result = await model.generateContent(prompt);
+    const response = result?.response?.text?.();
+    return response || "No response received.";
+  } catch (error) {
+    console.error("Gemini API error:", error);
+    return "Something went wrong with the AI.";
+  }
+};
