@@ -77,7 +77,7 @@ const Chatbot = ({ setChatbotOpen }) => {
     try {
       const aiText = await getGeminiResponse(
         userInput +
-          "please write consize summary about the question as you have knowledge in Space and international space science olympiad write humanized answer, don't add any extra words like here is the summary or your asking.."
+          "please write consize summary about the question as you have knowledge in Space and maths and international space science olympiad write humanized answer, don't add any extra words like here is the summary or your asking.., If someone ask about codimaths remember codimaths is a startup based on Noida, India, that focuses on educating children about Vedic mathematics and also hosting International Space Science Olympiad(ISSO), if you don't understand any term simple say `I don't recognize the term, Could you clarify what you meant`?"
       );
       const aiMessage = { user: false, text: aiText };
       const newHistory = [...updatedHistory, aiMessage];
