@@ -9,6 +9,7 @@ import card5 from "../public/assets/draw5.jpeg";
 import card6 from "../public/assets/draw6.jpeg";
 import card7 from "../public/assets/draw7.jpeg";
 import card8 from "../public/assets/draw8.jpeg";
+import Link from "next/link";
 
 const HeroSection6 = () => {
   const cardData = [
@@ -65,9 +66,12 @@ const HeroSection6 = () => {
           </div>
         ))}
       </div>
-      <div className="px-5 py-2 rounded-lg bg-transparent text-white border border-white/80 font-medium my-9 hover:bg-white/10 cursor-pointer">
+      <Link
+        href="mailto:info@codimaths.com?subject=Submission%20for%20Kids%20Space%20Art%20Gallery"
+        className="px-5 py-2 rounded-lg bg-transparent text-white border border-white/80 font-medium my-9 hover:bg-white/10 cursor-pointer"
+      >
         Send Us Your ART
-      </div>
+      </Link>
     </div>
   );
 };

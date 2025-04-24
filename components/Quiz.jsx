@@ -110,7 +110,7 @@ const Quiz = () => {
   };
 
   return (
-    <div className="backdrop-blur-sm text-center bg-black/20 border border-white/30 p-6 rounded-2xl flex flex-col justify-center items-center text-white w-[50vw] h-fit gap-5">
+    <div className="backdrop-blur-sm text-center bg-black/20 border border-white/30 p-6 rounded-2xl flex flex-col justify-center items-center text-white w-[50vw] h-fit gap-5 max-sm:w-full">
       <h2 className="text-4xl font-medium font-lilita text-primary-blue">
         ISSO Mock Quiz Challenge
       </h2>
