@@ -3,6 +3,7 @@
 import React, { useEffect, useRef } from "react";
 import isso from "../public/assets/isso.png";
 import Image from "next/image";
+import { redirect } from "next/navigation";
 
 const HeroSection3 = () => {
   const videoRef = useRef(null);
@@ -60,7 +61,10 @@ const HeroSection3 = () => {
             </React.Fragment>
           ))}
         </div>
-        <div className="px-5 py-2 bg-primary-blue text-white font-medium rounded-md cursor-pointer hover:shadow-[0_0_10px_2px_rgba(65,101,178,0.6) hover:bg-opacity-80 mt-8 mb-5">
+        <div
+          className="px-5 py-2 bg-primary-blue text-white font-medium rounded-md cursor-pointer hover:shadow-[0_0_10px_2px_rgba(65,101,178,0.6) hover:bg-opacity-80 mt-8 mb-5"
+          onClick={() => redirect("/olympiad")}
+        >
           Register Now
         </div>
       </div>
