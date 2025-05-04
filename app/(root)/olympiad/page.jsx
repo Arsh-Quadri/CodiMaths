@@ -6,10 +6,10 @@ import { useState } from "react";
 import { collection, addDoc } from "firebase/firestore";
 import { db } from "../../../lib/firebase";
 import { toast } from "react-toastify";
-import card1 from "../../../public/assets/vision-icon.png";
-import card2 from "../../../public/assets/mission-icon.png";
-import card3 from "../../../public/assets/book-icon.png";
-import card4 from "../../../public/assets/student-icon.png";
+import card1 from "../../../public/assets/rocket.png";
+import card2 from "../../../public/assets/brain.png";
+import card3 from "../../../public/assets/trophy.png";
+import card4 from "../../../public/assets/learn.png";
 import Quiz from "../../../components/Quiz";
 
 const Olympiad = () => {

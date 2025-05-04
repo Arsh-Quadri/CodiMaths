@@ -10,6 +10,7 @@ import logo from "../public/assets/logoCodimat.png";
 import MenuIcon from "@mui/icons-material/Menu";
 import CloseIcon from "@mui/icons-material/Close";
 import { useState } from "react";
+import { redirect } from "next/navigation";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -42,7 +43,10 @@ const Navbar = () => {
           <div className="hover:text-primary-blue transition-colors duration-300 cursor-pointer">
             Announcements
           </div>
-          <div className="hover:text-primary-blue transition-colors duration-300 cursor-pointer">
+          <div
+            className="hover:text-primary-blue transition-colors duration-300 cursor-pointer"
+            onClick={() => redirect("/events")}
+          >
             Events
           </div>
           <div className="hover:text-primary-blue transition-colors duration-300 cursor-pointer">
@@ -64,7 +68,9 @@ const Navbar = () => {
         <div className="sider absolute top-0 left-0 w-full bg-primary-exdark/95 px-10 pt-20 h-screen flex flex-col items-center justify-star gap-5 -z-10 text-xl font-medium">
           <div className="">Home</div>
           <div className="">Announcements</div>
-          <div className="">Events</div>
+          <div className="" onClick={() => redirect("/events")}>
+            Events
+          </div>
           <div className="">About</div>
           <div className="">Contact</div>
         </div>

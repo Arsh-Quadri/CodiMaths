@@ -24,7 +24,6 @@ import HeroSection5 from "../../components/HeroSection5";
 import HeroSection6 from "../../components/HeroSection6";
 import HeroSection7 from "../../components/HeroSection7";
 import HeroSection8 from "../../components/HeroSection8";
-import Footer from "../../components/Footer";
 
 export default function Home() {
   return (
@@ -72,7 +71,6 @@ export default function Home() {
         <HeroSection8 />
         <div className="w-full h-20 bg-gradient-to-b from-transparent to-primary-dark absolute bottom-0 left-0 z-20" />
       </div>
-      <Footer />
     </div>
   );
 }
