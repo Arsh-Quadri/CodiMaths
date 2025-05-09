@@ -4,6 +4,7 @@ import event1 from "../../../public/assets/event1.jpeg";
 import event2 from "../../../public/assets/event2.jpg";
 import event3 from "../../../public/assets/event3.jpeg";
 import event4 from "../../../public/assets/event4.jpeg";
+import event5 from "../../../public/assets/event5.jpeg";
 
 const EventsPage = () => {
   const events = [
@@ -30,6 +31,12 @@ const EventsPage = () => {
       image: event4,
       link: "/events/student-isro-visit",
       desc: "Codimaths organized an educational trip for Air Force School students to ISRO’s IN-SPACe headquarters, inspiring young minds through real-world space exploration insights.",
+    },
+    {
+      title: "GLEX 2025 Participation & MOU Signing",
+      image: event5,
+      link: "/events/glex-2025-mou",
+      desc: "Codimaths proudly participated in the Global Space Exploration Conference (GLEX) 2025 and signed a MOU, reinforcing our commitment to global space education and collaboration.",
     },
   ];
 
