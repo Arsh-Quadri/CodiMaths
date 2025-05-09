@@ -14,7 +14,7 @@ const EventSection = ({ title, image, link, desc }) => {
       />
 
       {/* Overlay Content */}
-      <div className="relative z-10 flex flex-col md:flex-row items-center justify-between h-full px-6 md:px-16 animate-fadeInUp">
+      <div className="relative z-10 flex flex-col md:flex-row items-center justify-between h-full px-6 md:px-16 animate-fadeInUp gap-5">
         {/* Left Part */}
         <div className="text-white flex flex-col justify-center h-full md:w-1/2 text-center md:text-left">
           <h2 className="text-2xl md:text-3xl font-medium mb-3">{title}</h2>

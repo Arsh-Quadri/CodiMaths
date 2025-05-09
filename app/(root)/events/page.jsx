@@ -2,6 +2,8 @@ import React from "react";
 import EventSection from "../../../components/EventSection";
 import event1 from "../../../public/assets/event1.jpeg";
 import event2 from "../../../public/assets/event2.jpg";
+import event3 from "../../../public/assets/event3.jpeg";
+import event4 from "../../../public/assets/event4.jpeg";
 
 const EventsPage = () => {
   const events = [
@@ -16,6 +18,18 @@ const EventsPage = () => {
       image: event2,
       link: "/events/mars-exploration",
       desc: "Codimaths signed an MOU with IEEE AESS Gujarat Chapter",
+    },
+    {
+      title: "Olympiad Phase 1 Completed",
+      image: event3,
+      link: "/events/phase-1-schools", // new event page
+      desc: "Phase 1 of the Codimaths Olympiad concluded successfully with participation from top schools in Zimbabwe, Kenya, and South Africa.",
+    },
+    {
+      title: "Student Visit to ISRO IN-SPACe HQ",
+      image: event4,
+      link: "/events/student-isro-visit",
+      desc: "Codimaths organized an educational trip for Air Force School students to ISRO’s IN-SPACe headquarters, inspiring young minds through real-world space exploration insights.",
     },
   ];
 
