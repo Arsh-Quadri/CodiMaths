@@ -20,8 +20,8 @@ const EventSection = ({ title, image, link, desc }) => {
           <h2 className="text-2xl md:text-3xl font-medium mb-3">{title}</h2>
           <p className="font-medium text-gray-300 mb-3">{desc}</p>
           <a
-            href={link}
-            target="_blank"
+            // href={link}
+            // target="_blank"
             rel="noopener noreferrer"
             className="group relative overflow-hidden border border-white text-white px-4 py-2 rounded-sm w-fit mx-auto md:mx-0"
           >

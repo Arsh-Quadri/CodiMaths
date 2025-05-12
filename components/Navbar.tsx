@@ -37,7 +37,10 @@ const Navbar = () => {
           </div>
         </Link>
         <div className="hidden sm:flex items-center gap-5 md:gap-8 text-base md:text-lg">
-          <div className="hover:text-primary-blue transition-colors duration-300 cursor-pointer">
+          <div
+            className="hover:text-primary-blue transition-colors duration-300 cursor-pointer"
+            onClick={() => redirect("/")}
+          >
             Home
           </div>
           <div className="hover:text-primary-blue transition-colors duration-300 cursor-pointer">
@@ -52,7 +55,10 @@ const Navbar = () => {
           <div className="hover:text-primary-blue transition-colors duration-300 cursor-pointer">
             About
           </div>
-          <div className="hover:text-primary-blue transition-colors duration-300 cursor-pointer">
+          <div
+            className="hover:text-primary-blue transition-colors duration-300 cursor-pointer"
+            onClick={() => redirect("/contact")}
+          >
             Contact
           </div>
         </div>
